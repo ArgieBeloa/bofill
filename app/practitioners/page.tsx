@@ -35,7 +35,7 @@ for (const employee of employeeList) {
       {/* <NavbarPremium /> */}
       {/* <section className="min-h-[calc(100vh-80px)] flex flex-col bg-linear-to-br from-blue-100 via-white to-blue-200 shadow-[0_30px_80px_rgba(37,99,235,0.18)]"> */}
       <section className="min-h-[calc(100vh-80px)] flex flex-col">
-        <div className="flex flex-col justify-center items-center my-15">
+        <div className="flex flex-col justify-center items-center my-10 p-5 text-center">
           <h1 className="font-bold text-4xl tracking-wider">
             Our Mental Health Professionals
           </h1>

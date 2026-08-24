@@ -141,7 +141,6 @@ export default function Landingpage() {
               <FaLock className="text-blue-600 text-xl sm:text-2xl shrink-0" />
               <p className="text-sm sm:text-base leading-tight">
                 Confidential &
-                <br />
                 Safe
               </p>
             </div>
