@@ -112,3 +112,18 @@ export const Employee8: EmployeeModel = {
   languages: [{ name: "English" }, { name: "Spanish" }],
   clientfocus: "18-50 years old",
 };
+
+
+export const employees: EmployeeModel[] = [
+  Employee1,
+  Employee2,
+  Employee3,
+  Employee4,
+  Employee5,
+  Employee6,
+  Employee7,
+  Employee8,
+];
+
+export const getEmployeeById = (id: string): EmployeeModel | undefined =>
+  employees.find((employee) => employee.id === id);

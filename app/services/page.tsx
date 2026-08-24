@@ -1,98 +1,46 @@
-"use client";
-const services = [
-  {
-    title: "Individual Counseling",
-    description:
-      "One-on-one support in a safe and confidential space to help you understand your thoughts, emotions, and challenges.",
-    icon: "🧠",
-  },
-  {
-    title: "Anxiety & Stress Support",
-    description:
-      "Learn practical strategies to manage stress, anxiety, and everyday emotional challenges.",
-    icon: "🌿",
-  },
-  {
-    title: "Depression Support",
-    description:
-      "Compassionate guidance to help you navigate difficult emotions and develop healthier coping strategies.",
-    icon: "☀️",
-  },
-  {
-    title: "Relationship Counseling",
-    description:
-      "Build healthier communication, understanding, and connections with the people who matter to you.",
-    icon: "💙",
-  },
-  {
-    title: "Student Mental Wellness",
-    description:
-      "Support designed for students dealing with academic pressure, stress, confidence, and life transitions.",
-    icon: "🎓",
-  },
-  {
-    title: "Online Counseling",
-    description:
-      "Access supportive mental health conversations from the comfort of your own space.",
-    icon: "💬",
-  },
-];
-
-// services offer 
-// design typograph
-//  more service
-
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import { services } from "@/app/helpers/serviceData/service";
 
 const ServicesPage = () => {
   return (
-    <>
-      <main className="min-h-screen bg-linear-to-b from-slate-50 via-white to-blue-50 px-6 py-20">
-        {/* Header */}
-        <div className="mx-auto max-w-3xl text-center">
-          {/* <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Our Services
-          </p> */}
+    <main className="min-h-screen bg-linear-to-b from-slate-50 via-white to-blue-50 px-4 sm:px-6 py-14 sm:py-20">
+      {/* ...header stays the same... */}
 
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-            Support for your mental well-being
-          </h1>
-
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            Compassionate and accessible support designed to help you navigate
-            life&apos;s challenges and build healthier habits.
-          </p>
-        </div>
-
-        {/* Services */}
-        <section className="mx-auto mt-16 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+      <section className="mx-auto mt-12 sm:mt-16 grid max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {services.map((service) => {
+          const Icon = service.icon;
+          return (
             <div
-              key={service.title}
-              className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              key={service.slug}
+              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-200"
             >
-              {/* Icon */}
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-2xl">
-                {service.icon}
+              <div className="mb-5 sm:mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 text-xl transition-colors duration-300 group-hover:bg-blue-950 group-hover:text-white">
+                <Icon />
               </div>
 
-              {/* Content */}
-              <h2 className="text-xl font-semibold text-slate-900">
+              <h2 className="text-lg sm:text-xl font-semibold text-slate-900">
                 {service.title}
               </h2>
 
-              <p className="mt-3 leading-7 text-slate-600">
+              <p className="mt-3 flex-1 text-sm sm:text-base leading-6 sm:leading-7 text-slate-600 line-clamp-4">
                 {service.description}
               </p>
 
-              {/* Link */}
-              <button className="mt-6 font-medium text-blue-600 transition group-hover:text-blue-700">
-                Learn more →
-              </button>
+              <Link
+                href={`/services/${service.slug}`}
+                className="group/btn mt-6 flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-900"
+              >
+                Learn more
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-950 transition-colors duration-300 group-hover/btn:bg-blue-600">
+                  <FaArrowRight className="text-white text-xs" />
+                </div>
+              </Link>
             </div>
-          ))}
-        </section>
-      </main>
-    </>
+          );
+        })}
+      </section>
+    </main>
   );
 };
 

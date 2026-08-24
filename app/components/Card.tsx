@@ -2,7 +2,9 @@ import Image from "next/image";
 import type EmployeeModel from "@/app/helpers/employee/employeeModel";
 import { MdVerified } from "react-icons/md";
 import { HiUsers } from "react-icons/hi2";
+import Link from "next/link";
 const Card = ({
+  id,
   name,
   image,
   licensed,
@@ -68,13 +70,19 @@ const Card = ({
 
           {/* Buttons */}
           <div className="mt-2 flex gap-3 mb-2">
-            <button className="flex-1 rounded border border-white/30 bg-white/10 py-1 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:shadow-lg">
+            <Link
+              href={`/practitioners/${id}`}
+              className="flex-1 rounded border border-white/30 bg-white/10 py-1 text-center text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:shadow-lg"
+            >
               View Profile
-            </button>
+            </Link>
 
-            <button className="flex-1 rounded bg-white py-1 text-sm font-semibold text-gray-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-lg">
+            <Link
+              href="/book"
+              className="flex-1 rounded bg-white py-1 text-center text-sm font-semibold text-gray-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-lg"
+            >
               Book Session
-            </button>
+            </Link>
           </div>
         </div>
       </div>
