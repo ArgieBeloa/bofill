@@ -100,7 +100,7 @@ export default function Landingpage() {
                 <FaAward />
               </div>
               <h2 className="font-bold text-slate-900 text-base sm:text-2xl">
-                10+
+                7+
               </h2>
               <p className="text-slate-600 text-xs sm:text-base leading-tight">
                 Years of Excellence

@@ -92,11 +92,12 @@ const Footer = () => {
             <h3 className="font-semibold text-black">Services</h3>
 
             <ul className="mt-5 space-y-3 text-sm text-black">
-              <li>Individual Counseling</li>
-              <li>Anxiety & Stress Support</li>
-              <li>Student Wellness</li>
-              <li>Relationship Counseling</li>
-              <li>Online Counseling</li>
+              <li>Mental Health Counseling</li>
+              <li>Psychotherapy</li>
+              <li>Occupational-therapy</li>
+              <li>Psychiatric-consultation</li>
+              <li>Group-therapy</li>
+              <li>drug-dependency-exam</li>
             </ul>
           </div>
 
@@ -107,17 +108,17 @@ const Footer = () => {
             <div className="mt-5 space-y-4 text-sm text-black">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-black" />
-                <span>Germany</span>
+                <span>2nd floor, One Mayon Place, Mayon St, Quezon City, 1114 Metro Manila</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={18} className="shrink-0 text-black" />
-                <span>info@example.com</span>
+                <span>hello@bofillpsychologicalservices.org</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={18} className="shrink-0 text-black" />
-                <span>+63 912 345 6789</span>
+                <span>0968 8552501</span>
               </div>
             </div>
           </div>

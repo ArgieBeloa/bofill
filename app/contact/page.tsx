@@ -85,7 +85,7 @@ const ContactPage = () => {
               <div>
                 <h2 className="font-semibold text-slate-900">Address</h2>
 
-                <p className="mt-1 text-sm text-slate-500">Germany</p>
+                <p className="mt-1 text-sm text-slate-500">2nd floor, One Mayon Place, Mayon St, Quezon City, 1114 Metro Manila</p>
               </div>
             </div>
 
@@ -98,7 +98,7 @@ const ContactPage = () => {
               <div>
                 <h2 className="font-semibold text-slate-900">Email</h2>
 
-                <p className="mt-1 text-sm text-slate-500">info@example.com</p>
+                <p className="mt-1 text-sm text-slate-500">hello@bofillpsychologicalservices.org</p>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ const ContactPage = () => {
               <div>
                 <h2 className="font-semibold text-slate-900">Phone</h2>
 
-                <p className="mt-1 text-sm text-slate-500">+63 912 345 6789</p>
+                <p className="mt-1 text-sm text-slate-500">0968 8552501</p>
               </div>
             </div>
           </div>
